@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>TabShelf</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <button id="orgSwitcher" class="org-switcher">
+      <span id="orgAvatar" class="avatar"></span>
+      <span id="orgName"></span>
+      <span class="caret">▾</span>
+    </button>
+    <button id="openWorkbench" class="open-btn">打开工作台</button>
+  </header>
+  <div id="orgDropdown" class="org-dropdown" hidden></div>
+
+  <div class="actions">
+    <button id="saveTab" class="action-btn">
+      <span class="action-icon">+</span>
+      <span>保存标签</span>
+    </button>
+    <button id="saveWindow" class="action-btn">
+      <span class="action-icon">⬇</span>
+      <span>保存窗口</span>
+    </button>
+  </div>
+
+  <label class="close-option">
+    <input id="closeTabs" type="checkbox">
+    保存后关闭标签
+  </label>
+
+  <div class="search-wrap">
+    <input id="search" type="search" placeholder="搜索收藏集或空间" autocomplete="off">
+  </div>
+
+  <div class="list-header">空间</div>
+  <div id="tree"></div>
+
+  <div id="status" role="status"></div>
+
+  <script src="storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

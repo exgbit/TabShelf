@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>TabShelf</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <nav class="rail">
+    <div id="orgList" class="org-list"></div>
+    <button id="railAdd" class="rail-btn" title="新建收藏集">+</button>
+    <div class="rail-bottom">
+      <button id="importBtn" class="rail-btn text-btn" title="导入 JSON">导入</button>
+      <button id="exportBtn" class="rail-btn text-btn" title="导出 JSON">导出</button>
+    </div>
+  </nav>
+
+  <aside class="spaces-panel">
+    <div class="spaces-header">
+      <span id="orgName">全部收藏集</span>
+    </div>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="搜索收藏集和标签" autocomplete="off">
+    </div>
+    <button id="myCollections" class="nav-item active">全部收藏集</button>
+    <button id="starredBtn" class="nav-item">星标收藏集</button>
+    <div class="spaces-title">
+      <span>空间</span>
+      <button id="addSpaceBtn" title="新建空间">+</button>
+    </div>
+    <div id="spaceList"></div>
+  </aside>
+
+  <main class="main">
+    <div class="main-header">
+      <div class="main-title">
+        <span id="spaceTitle">全部收藏集</span>
+        <span id="colCount" class="muted"></span>
+      </div>
+      <div class="main-actions">
+        <button id="expandAll">展开全部</button>
+        <button id="collapseAll">收起全部</button>
+        <button id="addCollectionBtn" class="accent">+ 新建收藏集</button>
+      </div>
+    </div>
+    <div class="content">
+      <div id="searchOpenWrap" hidden>
+        <h2>当前打开的标签</h2>
+        <div id="openResults" class="cards"></div>
+      </div>
+      <div id="sections"></div>
+      <div id="empty" class="hint" hidden>
+        还没有收藏集。点击浏览器工具栏的 TabShelf 图标，即可把当前窗口的标签保存为收藏集。
+      </div>
+      <div id="noResults" class="hint" hidden>没有匹配的标签</div>
+    </div>
+  </main>
+
+  <aside class="open-tabs">
+    <div class="open-tabs-header">打开的标签</div>
+    <div id="windowList"></div>
+  </aside>
+
+  <input id="importFile" type="file" accept="application/json,.json" hidden>
+  <script src="storage.js"></script>
+  <script src="newtab.js"></script>
+</body>
+</html>
