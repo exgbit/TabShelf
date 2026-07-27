@@ -1,5 +1,5 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * {
@@ -12,8 +12,8 @@ body {
   margin: 0;
   font-family: -apple-system, "PingFang SC", "Segoe UI", sans-serif;
   font-size: 13px;
-  background: #0f1115;
-  color: #e6e8ee;
+  background: #ffffff;
+  color: #20242e;
   display: flex;
   flex-direction: column;
   max-height: 480px;
@@ -36,18 +36,18 @@ header {
   border: none;
   border-radius: 8px;
   background: none;
-  color: #e6e8ee;
+  color: #20242e;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .org-switcher:hover {
-  background: #1c202a;
+  background: #f3f3f7;
 }
 
 .org-switcher .caret {
-  color: #6b7280;
+  color: #9aa0ad;
   font-size: 10px;
 }
 
@@ -77,10 +77,10 @@ header {
   z-index: 20;
   min-width: 170px;
   padding: 4px;
-  border: 1px solid #2c303a;
+  border: 1px solid #e8e8ee;
   border-radius: 10px;
-  background: #1c202a;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .org-option {
@@ -92,24 +92,24 @@ header {
   border: none;
   border-radius: 8px;
   background: none;
-  color: #e6e8ee;
+  color: #20242e;
   font-size: 13px;
   cursor: pointer;
   text-align: left;
 }
 
 .org-option:hover {
-  background: #242936;
+  background: #f3f3f7;
 }
 
 .org-option.active {
-  color: #7f96f8;
+  color: #e8458b;
 }
 
 .open-btn {
   border: none;
   background: none;
-  color: #7f96f8;
+  color: #e8458b;
   font-size: 12px;
   cursor: pointer;
   padding: 4px 0;
@@ -136,21 +136,21 @@ header {
   padding: 12px 0;
   border: none;
   border-radius: 10px;
-  background: #1c202a;
-  color: #e6e8ee;
+  background: #f4f4f7;
+  color: #20242e;
   font-size: 12px;
   cursor: pointer;
 }
 
 .action-btn:hover {
-  background: #242936;
+  background: #ececf2;
 }
 
 .action-icon {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #4f6ef7;
+  background: #e8458b;
   color: #fff;
   font-size: 16px;
   display: flex;
@@ -164,7 +164,7 @@ header {
   gap: 6px;
   padding: 10px 14px 0;
   font-size: 12px;
-  color: #aab0bd;
+  color: #6b7280;
   cursor: pointer;
 }
 
@@ -178,15 +178,16 @@ header {
   width: 100%;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid #2c303a;
-  background: #171a21;
+  border: 1px solid #e2e2e8;
+  background: #f4f4f7;
   color: inherit;
   font-size: 13px;
   outline: none;
 }
 
 #search:focus {
-  border-color: #4f6ef7;
+  border-color: #e8458b;
+  background: #ffffff;
 }
 
 .list-header {
@@ -194,7 +195,7 @@ header {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: #6b7280;
+  color: #9aa0ad;
 }
 
 /* 列表区 */
@@ -216,20 +217,20 @@ header {
   border: none;
   border-radius: 8px;
   background: none;
-  color: #e6e8ee;
+  color: #20242e;
   font-size: 13px;
   cursor: pointer;
 }
 
 .space-row:hover {
-  background: #1c202a;
+  background: #f3f3f7;
 }
 
 .space-row .icon {
   width: 16px;
   text-align: center;
   font-size: 13px;
-  color: #aab0bd;
+  color: #6b7280;
   flex: none;
 }
 
@@ -242,7 +243,7 @@ header {
 }
 
 .space-row .count {
-  color: #6b7280;
+  color: #9aa0ad;
   font-size: 11px;
 }
 
@@ -250,7 +251,7 @@ header {
   padding: 2px 7px;
   border: none;
   background: none;
-  color: #7f96f8;
+  color: #e8458b;
   font-size: 13px;
   cursor: pointer;
   visibility: hidden;
@@ -261,12 +262,12 @@ header {
 }
 
 .space-row .row-save:hover {
-  background: rgba(79, 110, 247, 0.2);
+  background: rgba(232, 69, 139, 0.12);
   border-radius: 6px;
 }
 
 .space-row .chevron {
-  color: #6b7280;
+  color: #9aa0ad;
   font-size: 14px;
 }
 
@@ -295,7 +296,7 @@ header {
   border: none;
   border-radius: 6px;
   background: none;
-  color: #aab0bd;
+  color: #6b7280;
   font-size: 15px;
   cursor: pointer;
   display: flex;
@@ -305,8 +306,8 @@ header {
 }
 
 .nav-btn:hover {
-  background: #1c202a;
-  color: #7f96f8;
+  background: #f3f3f7;
+  color: #e8458b;
 }
 
 /* 收藏集行 */
@@ -320,15 +321,15 @@ header {
   border: none;
   border-radius: 8px;
   background: none;
-  color: #aab0bd;
+  color: #4a4f5c;
   font-size: 13px;
   cursor: pointer;
   text-align: left;
 }
 
 .col-row:hover {
-  background: rgba(79, 110, 247, 0.16);
-  color: #7f96f8;
+  background: rgba(232, 69, 139, 0.10);
+  color: #e8458b;
 }
 
 .col-row .col-name {
@@ -340,7 +341,7 @@ header {
 }
 
 .col-row .count {
-  color: #6b7280;
+  color: #9aa0ad;
   font-size: 11px;
   flex: none;
 }
@@ -348,7 +349,7 @@ header {
 .tree-empty {
   padding: 20px 14px;
   text-align: center;
-  color: #6b7280;
+  color: #9aa0ad;
 }
 
 /* 状态提示 */
@@ -357,11 +358,11 @@ header {
   min-height: 30px;
   padding: 8px 14px;
   font-size: 12px;
-  color: #6fce8b;
+  color: #3d9e5f;
   text-align: center;
-  border-top: 1px solid #23262e;
+  border-top: 1px solid #ececf0;
 }
 
 #status.error {
-  color: #f07575;
+  color: #e0455a;
 }

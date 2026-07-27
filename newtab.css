@@ -1,5 +1,5 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * {
@@ -18,32 +18,32 @@ body {
   overflow: hidden;
   font-family: -apple-system, "PingFang SC", "Segoe UI", sans-serif;
   font-size: 13px;
-  background: #0f1115;
-  color: #e6e8ee;
+  background: #ffffff;
+  color: #20242e;
 }
 
 button {
-  border: 1px solid #2c303a;
+  border: 1px solid #dcdce4;
   border-radius: 6px;
-  background: #1c202a;
-  color: #e6e8ee;
+  background: #ffffff;
+  color: #20242e;
   font-size: 12px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #242936;
+  background: #f3f3f7;
 }
 
 .muted {
-  color: #6b7280;
+  color: #9aa0ad;
   font-weight: 400;
 }
 
 .hint {
   padding: 60px 0;
   text-align: center;
-  color: #6b7280;
+  color: #9aa0ad;
 }
 
 /* ---------- 左一：组织图标栏 ---------- */
@@ -54,8 +54,8 @@ button:hover {
   align-items: center;
   gap: 10px;
   padding: 12px 0;
-  background: #0b0d11;
-  border-right: 1px solid #23262e;
+  background: #ffffff;
+  border-right: 1px solid #ececf0;
 }
 
 .org-list {
@@ -80,16 +80,16 @@ button:hover {
 }
 
 .org-avatar.active {
-  border-color: #7f96f8;
+  border-color: #e8458b;
 }
 
 .rail-btn {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 1px dashed #2c303a;
+  border: 1px dashed #d5d5dd;
   background: none;
-  color: #aab0bd;
+  color: #6b7280;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -97,8 +97,8 @@ button:hover {
 }
 
 .rail-btn:hover {
-  border-color: #4f6ef7;
-  color: #7f96f8;
+  border-color: #e8458b;
+  color: #e8458b;
   background: none;
 }
 
@@ -121,8 +121,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding: 14px 12px;
-  background: #12141a;
-  border-right: 1px solid #23262e;
+  background: #f7f7f9;
+  border-right: 1px solid #ececf0;
   overflow-y: auto;
 }
 
@@ -143,15 +143,15 @@ button:hover {
   width: 100%;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid #2c303a;
-  background: #171a21;
+  border: 1px solid #dcdce4;
+  background: #ffffff;
   color: inherit;
   font-size: 13px;
   outline: none;
 }
 
 #search:focus {
-  border-color: #4f6ef7;
+  border-color: #e8458b;
 }
 
 .nav-item {
@@ -164,21 +164,21 @@ button:hover {
   background: none;
   text-align: left;
   font-size: 13px;
-  color: #aab0bd;
+  color: #4a4f5c;
 }
 
 .nav-item:hover {
-  background: #1c202a;
+  background: #ececf2;
 }
 
 .nav-item.active {
-  background: rgba(79, 110, 247, 0.16);
-  color: #7f96f8;
+  background: rgba(232, 69, 139, 0.10);
+  color: #e8458b;
 }
 
 .nav-item .count {
   float: right;
-  color: #6b7280;
+  color: #9aa0ad;
   font-size: 11px;
 }
 
@@ -190,7 +190,7 @@ button:hover {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: #6b7280;
+  color: #9aa0ad;
 }
 
 .spaces-title button {
@@ -199,13 +199,13 @@ button:hover {
   padding: 0;
   border: none;
   background: none;
-  color: #aab0bd;
+  color: #6b7280;
   font-size: 14px;
   line-height: 1;
 }
 
 .spaces-title button:hover {
-  color: #7f96f8;
+  color: #e8458b;
 }
 
 /* ---------- 中间：收藏集 ---------- */
@@ -222,7 +222,7 @@ button:hover {
   justify-content: space-between;
   gap: 12px;
   padding: 14px 22px;
-  border-bottom: 1px solid #23262e;
+  border-bottom: 1px solid #ececf0;
 }
 
 .main-title {
@@ -246,12 +246,13 @@ button:hover {
 }
 
 .main-actions .accent {
-  background: #4f6ef7;
-  border-color: #4f6ef7;
+  background: #e8458b;
+  border-color: #e8458b;
+  color: #ffffff;
 }
 
 .main-actions .accent:hover {
-  background: #3f5de6;
+  background: #d13a7b;
 }
 
 .content {
@@ -264,16 +265,17 @@ h2 {
   margin: 16px 0 8px;
   font-size: 12px;
   font-weight: 600;
-  color: #aab0bd;
+  color: #6b7280;
 }
 
 .collection {
-  border-bottom: 1px solid #1d2029;
+  border-bottom: 1px solid #f0f0f4;
   padding-bottom: 10px;
   margin-bottom: 6px;
 }
 
 .collection-header {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -283,7 +285,7 @@ h2 {
 }
 
 .collection-header .caret {
-  color: #6b7280;
+  color: #9aa0ad;
   font-size: 11px;
   transition: transform 0.12s;
 }
@@ -299,7 +301,7 @@ h2 {
 }
 
 .collection-header .count {
-  color: #6b7280;
+  color: #9aa0ad;
   font-size: 11px;
 }
 
@@ -308,10 +310,6 @@ h2 {
   display: flex;
   gap: 4px;
   visibility: hidden;
-}
-
-.collection-header {
-  position: relative;
 }
 
 .collection-header:hover .col-actions {
@@ -332,10 +330,10 @@ h2 {
   right: 0;
   z-index: 40;
   padding: 4px 8px;
-  border: 1px solid #2c303a;
+  border: none;
   border-radius: 6px;
-  background: #242936;
-  color: #e6e8ee;
+  background: #20242e;
+  color: #ffffff;
   font-size: 11px;
   white-space: nowrap;
   pointer-events: none;
@@ -348,11 +346,11 @@ h2 {
 }
 
 .icon-btn.starred-on {
-  color: #f5c542;
+  color: #f0b429;
 }
 
 .star-mark {
-  color: #f5c542;
+  color: #f0b429;
   font-size: 11px;
 }
 
@@ -363,10 +361,10 @@ h2 {
   z-index: 30;
   min-width: 130px;
   padding: 4px;
-  border: 1px solid #2c303a;
+  border: 1px solid #e8e8ee;
   border-radius: 10px;
-  background: #1c202a;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
 }
@@ -376,19 +374,14 @@ h2 {
   border: none;
   border-radius: 6px;
   background: none;
-  color: #e6e8ee;
+  color: #20242e;
   font-size: 12px;
   text-align: left;
   cursor: pointer;
 }
 
 .menu-item:hover {
-  background: #242936;
-}
-
-.col-actions button {
-  padding: 3px 8px;
-  font-size: 11px;
+  background: #f3f3f7;
 }
 
 /* 书签卡片 */
@@ -410,8 +403,8 @@ h2 {
   gap: 10px;
   padding: 10px 12px;
   border-radius: 8px;
-  background: #1c202a;
-  border: 1px solid transparent;
+  background: #ffffff;
+  border: 1px solid #e8e8ee;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -419,7 +412,8 @@ h2 {
 }
 
 .bookmark-card:hover {
-  background: #242936;
+  background: #f7f7fa;
+  border-color: #dcdce4;
 }
 
 .bookmark-card img,
@@ -431,8 +425,8 @@ h2 {
 }
 
 .bookmark-card .letter-icon {
-  background: #2c303a;
-  color: #aab0bd;
+  background: #ececf0;
+  color: #6b7280;
   font-size: 11px;
   line-height: 20px;
   text-align: center;
@@ -452,7 +446,7 @@ h2 {
 
 .bookmark-card .bc-url {
   font-size: 11px;
-  color: #6b7280;
+  color: #9aa0ad;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -465,7 +459,7 @@ h2 {
   padding: 0 5px;
   border: none;
   background: none;
-  color: #6b7280;
+  color: #9aa0ad;
   font-size: 13px;
   line-height: 1.4;
   visibility: hidden;
@@ -476,16 +470,16 @@ h2 {
 }
 
 .bookmark-card .remove:hover {
-  color: #f07575;
+  color: #e0455a;
 }
 
-/* ---------- 右栏：OPEN TABS ---------- */
+/* ---------- 右栏：打开的标签 ---------- */
 
 .open-tabs {
   display: flex;
   flex-direction: column;
-  background: #12141a;
-  border-left: 1px solid #23262e;
+  background: #f7f7f9;
+  border-left: 1px solid #ececf0;
   overflow-y: auto;
 }
 
@@ -494,7 +488,7 @@ h2 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #e6e8ee;
+  color: #20242e;
   text-align: right;
 }
 
@@ -507,7 +501,7 @@ h2 {
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  color: #e6e8ee;
+  color: #20242e;
   font-size: 12px;
   font-weight: 600;
 }
@@ -523,11 +517,11 @@ h2 {
   font-size: 11px;
   border: none;
   background: none;
-  color: #aab0bd;
+  color: #6b7280;
 }
 
 .window-header .win-actions button:hover {
-  color: #7f96f8;
+  color: #e8458b;
 }
 
 .open-tab-row {
@@ -536,18 +530,19 @@ h2 {
   gap: 8px;
   margin: 2px 10px;
   padding: 7px 10px;
+  border: 1px solid #e8e8ee;
   border-radius: 8px;
-  background: #1c202a;
+  background: #ffffff;
   cursor: pointer;
   min-width: 0;
 }
 
 .open-tab-row:hover {
-  background: #242936;
+  background: #f3f3f7;
 }
 
 .open-tab-row.active-tab {
-  outline: 1px solid #4f6ef7;
+  outline: 1px solid #e8458b;
 }
 
 .open-tab-row img,
@@ -559,8 +554,8 @@ h2 {
 }
 
 .open-tab-row .letter-icon {
-  background: #2c303a;
-  color: #aab0bd;
+  background: #ececf0;
+  color: #6b7280;
   font-size: 10px;
   line-height: 16px;
   text-align: center;
