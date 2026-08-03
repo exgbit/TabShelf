@@ -34,7 +34,8 @@
   let showStarred = false;   // true = 只看星标收藏集
   const collapsedIds = new Set();
 
-  const orgOf = c => c.org || DEFAULT_ORG;
+  const orgKey = c => c.org || '';
+  const orgDisplay = raw => raw || DEFAULT_ORG;
   const spaceOf = c => c.space || '';
 
   /* ---------- 工具 ---------- */
@@ -79,7 +80,7 @@
 
   function visibleCollections() {
     const visible = collections.filter(c =>
-      (selectedOrg === null || orgOf(c) === selectedOrg) &&
+      (selectedOrg === null || orgKey(c) === selectedOrg) &&
       (showStarred ? !!c.starred
                    : (selectedSpace === null || spaceOf(c) === selectedSpace)));
     // 星标收藏集置顶
@@ -102,12 +103,13 @@
     });
     orgListEl.appendChild(allBtn);
 
-    const orgs = [...new Set(collections.map(orgOf))];
+    const orgs = [...new Set(collections.map(orgKey))];
     for (const org of orgs) {
+      const label = orgDisplay(org);
       const avatar = el('div', 'org-avatar' + (selectedOrg === org ? ' active' : ''));
-      avatar.textContent = org.slice(0, 2);
-      avatar.title = org;
-      avatar.style.background = orgColor(org);
+      avatar.textContent = label.slice(0, 2);
+      avatar.title = label;
+      avatar.style.background = orgColor(label);
       avatar.addEventListener('click', () => {
         selectedOrg = selectedOrg === org ? null : org;
         selectedSpace = null;
@@ -121,9 +123,9 @@
   /* ---------- 左二：空间面板 ---------- */
 
   function renderSpaces() {
-    orgNameEl.textContent = selectedOrg || '全部收藏集';
+    orgNameEl.textContent = selectedOrg === null ? '全部收藏集' : orgDisplay(selectedOrg);
 
-    const inOrg = collections.filter(c => selectedOrg === null || orgOf(c) === selectedOrg);
+    const inOrg = collections.filter(c => selectedOrg === null || orgKey(c) === selectedOrg);
 
     myCollectionsBtn.classList.toggle('active', !showStarred && selectedSpace === null);
     myCollectionsBtn.innerHTML = '';

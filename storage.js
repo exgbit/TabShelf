@@ -50,11 +50,21 @@
     return true;
   }
 
+  /** bug 修复：newtab.js 曾把默认组织的展示名"个人"误存成真实 org 值，这里合并回真正的默认组织（空字符串） */
+  function fixDefaultOrgLabel(col) {
+    if (col.org === '个人') {
+      col.org = '';
+      return true;
+    }
+    return false;
+  }
+
   async function getAll() {
     const data = await chrome.storage.local.get(KEY);
     const collections = data[KEY] || [];
     let dirty = false;
     for (const c of collections) dirty = migrate(c) || dirty;
+    for (const c of collections) dirty = fixDefaultOrgLabel(c) || dirty;
     if (dirty) await saveAll(collections);
     return collections;
   }
